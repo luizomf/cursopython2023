@@ -1,32 +1,41 @@
 {
-  "window.zoomLevel": 2,
-  "editor.fontFamily": "'Dank Mono', Consolas, Menlo, Monaco, 'Courier New', monospace",
-  "terminal.integrated.fontFamily": "'Dank Mono', Consolas, Menlo, Monaco, 'Courier New', monospace",
+  "window.zoomLevel": 1,
+  "workbench.startupEditor": "none",
+  "explorer.compactFolders": false,
+  "editor.fontSize": 24,
   "workbench.colorTheme": "OM Theme (Default Dracula Italic)",
-  // Python
+  "workbench.iconTheme": "material-icon-theme",
+  "code-runner.executorMap": {
+    "python": "clear ; python -u"
+  },
+  "code-runner.runInTerminal": true,
+  "code-runner.ignoreSelection": true,
+  "editor.fontFamily": "'Dank Mono', Consolas, 'Source Code Pro', 'Fira Code', Menlo, 'Inconsolata', 'Droid Sans Mono', 'DejaVu Sans Mono', 'Ubuntu Mono', 'Courier New', Courier, Monaco, monospace",
+  "terminal.integrated.fontFamily": "",
   "[python]": {
     "editor.defaultFormatter": "ms-python.python",
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      // "source.organizeImports": true
+      "source.fixAll": true,
+      "source.fixAll.unusedImports": false,
+      "source.organizeImports": true
     }
   },
   "python.languageServer": "Pylance",
   "python.formatting.autopep8Args": [
-    "--indent-size=4"
-    // "--ignore=E111",
+    "--indent-size=4",
+    "--max-line-length=80"
+    // "--ignore=E111"
   ],
   "python.linting.flake8Args": [
     // "--ignore=E111",
   ],
-  "python.linting.pylintArgs": [
-    "--load-plugins=pylint_django",
-    "--errors-only"
-  ],
   "python.linting.flake8Enabled": false,
   "python.testing.unittestEnabled": false,
   "python.linting.mypyEnabled": false,
-  "python.defaultInterpreterPath": "./venv/bin/python"
+  "python.analysis.diagnosticSeverityOverrides": {},
+  // "python.defaultInterpreterPath": "./venv/bin/python",
+  "python.analysis.typeCheckingMode": "off"
 }
