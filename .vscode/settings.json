@@ -1,0 +1,32 @@
+{
+  "window.zoomLevel": 2,
+  "editor.fontFamily": "'Dank Mono', Consolas, Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.fontFamily": "'Dank Mono', Consolas, Menlo, Monaco, 'Courier New', monospace",
+  "workbench.colorTheme": "OM Theme (Default Dracula Italic)",
+  // Python
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      // "source.organizeImports": true
+    }
+  },
+  "python.languageServer": "Pylance",
+  "python.formatting.autopep8Args": [
+    "--indent-size=4"
+    // "--ignore=E111",
+  ],
+  "python.linting.flake8Args": [
+    // "--ignore=E111",
+  ],
+  "python.linting.pylintArgs": [
+    "--load-plugins=pylint_django",
+    "--errors-only"
+  ],
+  "python.linting.flake8Enabled": false,
+  "python.testing.unittestEnabled": false,
+  "python.linting.mypyEnabled": false,
+  "python.defaultInterpreterPath": "./venv/bin/python"
+}
