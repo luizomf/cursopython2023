@@ -3,6 +3,7 @@
   "workbench.startupEditor": "none",
   "explorer.compactFolders": false,
   "editor.fontSize": 24,
+  "editor.rulers": [80, 120],
   "workbench.colorTheme": "OM Theme (Default Dracula Italic)",
   "workbench.iconTheme": "material-icon-theme",
   "code-runner.executorMap": {
@@ -10,7 +11,7 @@
   },
   "code-runner.runInTerminal": true,
   "code-runner.ignoreSelection": true,
-  "editor.fontFamily": "'Dank Mono', Consolas, 'Source Code Pro', 'Fira Code', Menlo, 'Inconsolata', 'Droid Sans Mono', 'DejaVu Sans Mono', 'Ubuntu Mono', 'Courier New', Courier, Monaco, monospace",
+  "editor.fontFamily": "Consolas, 'Dank Mono', 'Source Code Pro', 'Fira Code', Menlo, 'Inconsolata', 'Droid Sans Mono', 'DejaVu Sans Mono', 'Ubuntu Mono', 'Courier New', Courier, Monaco, monospace",
   "terminal.integrated.fontFamily": "",
   "[python]": {
     "editor.defaultFormatter": "ms-python.python",

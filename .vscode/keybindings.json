@@ -1,0 +1,160 @@
+[
+  {
+    // + Zoom na fonte
+    "key": "ctrl+alt+cmd+=",
+    "command": "editor.action.fontZoomIn"
+  },
+  {
+    // - Zoom na fonte
+    "key": "ctrl+alt+cmd+-",
+    "command": "editor.action.fontZoomOut"
+  },
+  {
+    // Reset zoom da fonte
+    "key": "ctrl+alt+cmd+0",
+    "command": "editor.action.fontZoomReset"
+  },
+  {
+    // Duplica linhas
+    "key": "alt+d",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    // Duplica linha acima
+    "key": "alt+s",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    // Comenta
+    "key": "ctrl+numpad_divide",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    // Remove o comenta original
+    "key": "ctrl+/",
+    "command": "-editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+alt+k",
+    "command": "code-runner.runCustomCommand"
+  },
+  {
+    "key": "ctrl+alt+k",
+    "command": "-code-runner.runCustomCommand"
+  },
+  {
+    // Salva todos os arquivos
+    "key": "ctrl+alt+cmd+s",
+    "command": "workbench.action.files.saveAll"
+  },
+  {
+    // Mostra o terminal
+    "key": "ctrl+'",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+shift+[BracketLeft]",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+'",
+    "command": "workbench.action.terminal.focus",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+'",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+  {
+    // Mata o terminal
+    "key": "ctrl+alt+b",
+    "command": "workbench.action.terminal.kill"
+  },
+  {
+    "key": "ctrl+escape",
+    "command": "workbench.action.toggleActivityBarVisibility"
+  },
+  {
+    // Muda para lowercase
+    "key": "shift+alt+l",
+    "command": "editor.action.transformToLowercase"
+  },
+  {
+    // Muda para snake case
+    "key": "shift+alt+s",
+    "command": "editor.action.transformToSnakecase"
+  },
+  {
+    // Muda para title case
+    "key": "shift+alt+t",
+    "command": "editor.action.transformToTitlecase"
+  },
+  {
+    // Muda para uppercase
+    "key": "shift+alt+u",
+    "command": "editor.action.transformToUppercase"
+  },
+  {
+    // Move painel para a direita
+    "key": "ctrl+alt+3",
+    "command": "workbench.action.positionPanelRight"
+  },
+  {
+    // Move o painel para baixo
+    "key": "ctrl+alt+2",
+    "command": "workbench.action.positionPanelBottom"
+  },
+  {
+    // Abre o terminal nativo
+    "key": "ctrl+cmd+c",
+    "command": "workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus"
+  },
+  {
+    // Remove Abre o terminal nativo padrão
+    "key": "shift+cmd+c",
+    "command": "-workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus"
+  },
+  {
+    // Volta o zoom ao padrão
+    "key": "ctrl+cmd+0",
+    "command": "workbench.action.zoomReset"
+  },
+  {
+    // Remove zoom padrão
+    "key": "cmd+numpad0",
+    "command": "-workbench.action.zoomReset"
+  },
+  {
+    // Zoom in
+    "key": "ctrl+cmd+=",
+    "command": "workbench.action.zoomIn"
+  },
+  {
+    // Remove zoom in padrão
+    "key": "cmd+numpad_add",
+    "command": "-workbench.action.zoomIn"
+  },
+  {
+    // Zoom out
+    "key": "ctrl+cmd+-",
+    "command": "workbench.action.zoomOut"
+  },
+  {
+    // Remove zoom out padrão
+    "key": "cmd+numpad_subtract",
+    "command": "-workbench.action.zoomOut"
+  },
+  {
+    // Novo arquivo
+    "key": "alt+cmd+n",
+    "command": "explorer.newFile"
+  }
+]
