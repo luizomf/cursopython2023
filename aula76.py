@@ -1,43 +1,27 @@
 # Manipulando chaves e valores em dicionários
-from pprint import pprint
+pessoa = {}
+
+##
+##
+
+chave = 'nome'
+
+pessoa[chave] = 'Luiz Otávio'
+pessoa['sobrenome'] = 'Miranda'
 
 
-def p(dicionario):
-    pprint(dicionario, sort_dicts=False)
+print(pessoa[chave])
 
+pessoa[chave] = 'Maria'
 
-pessoa = {
-    'nome': 'Luiz Otávio',
-    'sobrenome': 'Miranda',
-    'idade': 18,
-    'altura': 1.8,
-    'endereços': [
-        {'rua': 'tal tal', 'número': 123},
-        {'rua': 'outra rua', 'número': 321},
-    ],
-}
-pessoa['nome'] = 'João'
-pessoa[(1, 2, 3)] = 'EITA'
-del pessoa[(1, 2, 3)]
-del pessoa['nome']
-del pessoa['endereços']
-pessoa['teste de atenção'] = 'ATENÇÃO'
-print(pessoa['teste de atenção'])
-pessoa['teste de atenção'] = 'NOVA ATENÇÃO'
-del pessoa['teste de atenção']
-p(pessoa)
+del pessoa['sobrenome']
+print(pessoa)
+print(pessoa['nome'])
 
-# for chave in pessoa:
-#     if isinstance(chave, tuple):
-#         for valor in chave:
-#             print(valor, '<<-- DA TUPLA')
+# print(pessoa.get('sobrenome'))
+if pessoa.get('sobrenome') is None:
+    print('NÃO EXISTE')
+else:
+    print(pessoa['sobrenome'])
 
-# chave_dinamica = 'nome'
-# # print(pessoa[chave_dinamica])
-
-# if pessoa.get(chave_dinamica) is None:
-#     print('Chave não existe')
-# else:
-#     print(pessoa.get(chave_dinamica))
-
-# print(pessoa.get(chave_dinamica))
+# print('ISSO Não vai')
