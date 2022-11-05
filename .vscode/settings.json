@@ -17,7 +17,7 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.python",
     "editor.tabSize": 4,
-    "editor.insertSpaces": true,
+    "editor.insertSpaces": false,
     "editor.formatOnSave": true
     // "editor.codeActionsOnSave": {
     //   "source.fixAll": true,
