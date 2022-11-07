@@ -13,31 +13,21 @@ p1 = {
     'nome': 'Luiz',
     'sobrenome': 'Miranda',
 }
-
-# p1.update({
-#     'nome1': 'AAAA',
-#     'sobrenome1': 'BBBB',
-#     'idade': 123,
-# })
-# p1.update(idade=123, nome='Qualquer outro')
-variavel = (1,)
-print(variavel)
-p1.update(
-    (
-        ('Chave', 'Valor'),
-        ('Chave1', 'Valor1'),
-        ('Chave2', 'Valor1'),
-    )
-)
-print(p1)
-# print(p1.get('nome', 'Valor padrão'))
+# print(p1['nome'])
+# print(p1.get('nome', 'Não existe'))
 
 # nome = p1.pop('nome')
 # print(nome)
 # print(p1)
-
-# ultima_chave = p1.popitem()
-# print(ultima_chave)
 # ultima_chave = p1.popitem()
 # print(ultima_chave)
 # print(p1)
+# p1.update({
+#     'nome': 'novo valor',
+#     'idade': 30,
+# })
+# p1.update(nome='novo valor', idade=30)
+# tupla = (('nome', 'novo valor'), ('idade', 30))
+lista = [['nome', 'novo valor'], ['idade', 30]]
+p1.update(lista)
+print(p1)
