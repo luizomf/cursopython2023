@@ -1,7 +1,3 @@
-from eletronico import Smartphone
+conta_1 = ((1 + 1) ** (5 + 5))
 
-galaxy_s = Smartphone('Galaxy S')
-iphone = Smartphone('iPhone')
-
-galaxy_s.ligar()
-iphone.desligar()
+print(conta_1)
