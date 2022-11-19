@@ -24,20 +24,17 @@ class Ponto:
     def __add__(self, other):
         novo_x = self.x + other.x
         novo_y = self.y + other.y
-        novo_ponto = Ponto(novo_x, novo_y)
-        return novo_ponto
+        return Ponto(novo_x, novo_y)
 
     def __gt__(self, other):
         resultado_self = self.x + self.y
         resultado_other = other.x + other.y
-        # print(f'{resultado_self=}')
-        # print(f'{resultado_other=}')
         return resultado_self > resultado_other
 
 
 if __name__ == '__main__':
-    p1 = Ponto(4, 2)
-    p2 = Ponto(6, 4)
+    p1 = Ponto(4, 2)  # 6
+    p2 = Ponto(6, 4)  # 10
     p3 = p1 + p2
     print(p3)
     print('P1 é maior que p2', p1 > p2)
