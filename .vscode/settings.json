@@ -22,7 +22,7 @@
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.fixAll": true,
-      "source.fixAll.unusedImports": false,
+      "source.fixAll.unusedImports": true,
       "source.organizeImports": true
     }
   },
@@ -35,12 +35,12 @@
   "python.linting.flake8Args": [
     // "--ignore=E111",
   ],
-  "python.linting.flake8Enabled": false,
-  "python.linting.mypyEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.mypyEnabled": true,
   "python.testing.unittestEnabled": false,
-  "python.testing.pytestEnabled": false,
+  "python.testing.pytestEnabled": true,
   "python.analysis.diagnosticSeverityOverrides": {},
   // "python.defaultInterpreterPath": "./venv/bin/python",
-  "python.analysis.typeCheckingMode": "off",
+  "python.analysis.typeCheckingMode": "basic",
   "cSpell.enabled": false
 }
