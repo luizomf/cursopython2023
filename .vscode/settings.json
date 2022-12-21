@@ -42,5 +42,5 @@
   "python.analysis.diagnosticSeverityOverrides": {},
   // "python.defaultInterpreterPath": "./venv/bin/python",
   "python.analysis.typeCheckingMode": "basic",
-  "cSpell.enabled": false
+  "cSpell.enabled": true
 }
