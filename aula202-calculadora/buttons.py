@@ -1,7 +1,7 @@
 from display import Display
 from PySide6.QtCore import Slot
 from PySide6.QtWidgets import QGridLayout, QPushButton
-from utils import isEmpty, isNumOrDot
+from utils import isEmpty, isNumOrDot, isValidNumber
 from variables import MEDIUM_FONT_SIZE
 
 
@@ -15,7 +15,6 @@ class Button(QPushButton):
         font.setPixelSize(MEDIUM_FONT_SIZE)
         self.setFont(font)
         self.setMinimumSize(75, 75)
-        self.setCheckable(True)
 
 
 class ButtonsGrid(QGridLayout):
@@ -54,5 +53,10 @@ class ButtonsGrid(QGridLayout):
         return realSlot
 
     def _insertButtonTextToDisplay(self, button):
-        button_text = button.text()
-        self.display.insert(button_text)
+        buttonText = button.text()
+        newDisplayValue = self.display.text() + buttonText
+
+        if not isValidNumber(newDisplayValue):
+            return
+
+        self.display.insert(buttonText)
