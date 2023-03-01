@@ -1,5 +1,6 @@
 import sys
 
+from buttons import Button
 from display import Display
 from info import Info
 from main_window import MainWindow
@@ -26,6 +27,12 @@ if __name__ == '__main__':
     # Display
     display = Display()
     window.addToVLayout(display)
+
+    button = Button('Texto do botão')
+    window.addToVLayout(button)
+
+    button2 = Button('Texto do botão')
+    window.addToVLayout(button2)
 
     # Executa tudo
     window.adjustFixedSize()
