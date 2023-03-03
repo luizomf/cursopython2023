@@ -30,7 +30,7 @@ class ButtonsGrid(QGridLayout):
         super().__init__(*args, **kwargs)
 
         self._gridMask = [
-            ['C', '◀', '^', '/'],
+            ['C', 'D', '^', '/'],
             ['7', '8', '9', '*'],
             ['4', '5', '6', '-'],
             ['1', '2', '3', '+'],
@@ -77,6 +77,9 @@ class ButtonsGrid(QGridLayout):
 
         if text == 'C':
             self._connectButtonClicked(button, self._clear)
+
+        if text in 'D':
+            self._connectButtonClicked(button, self.display.backspace)
 
         if text in '+-/*^':
             self._connectButtonClicked(
