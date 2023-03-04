@@ -27,17 +27,18 @@ class Display(QLineEdit):
         key = event.key()
         KEYS = Qt.Key
 
-        isEnter = key in [KEYS.Key_Enter, KEYS.Key_Return]
-        isDelete = key in [KEYS.Key_Backspace, KEYS.Key_Delete]
-        isEsc = key in [KEYS.Key_Escape]
+        isEnter = key in [KEYS.Key_Enter, KEYS.Key_Return, KEYS.Key_Equal]
+        isDelete = key in [KEYS.Key_Backspace, KEYS.Key_Delete, KEYS.Key_D]
+        isEsc = key in [KEYS.Key_Escape, KEYS.Key_C]
 
         if isEnter:
-            print('Enter pressionado, sinal emitido', type(self).__name__)
+            print(f'EQ {text} pressionado, sinal emitido', type(self).__name__)
             self.eqPressed.emit()
             return event.ignore()
 
         if isDelete:
-            print('isDelete pressionado, sinal emitido', type(self).__name__)
+            print(f'isDelete  {text}  pressionado, sinal emitido',
+                  type(self).__name__)
             self.delPressed.emit()
             return event.ignore()
 
