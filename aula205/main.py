@@ -56,8 +56,28 @@ cursor.executemany(sql, (
     {'nome': 'Joana', 'peso': 5},
 ))
 connection.commit()
-cursor.close()
-connection.close()
+
 
 if __name__ == '__main__':
     print(sql)
+
+    cursor.execute(
+        f'DELETE FROM {TABLE_NAME} '
+        'WHERE id = "3"'
+    )
+    cursor.execute(
+        f'DELETE FROM {TABLE_NAME} '
+        'WHERE id = 1'
+    )
+    connection.commit()
+
+    cursor.execute(
+        f'SELECT * FROM {TABLE_NAME}'
+    )
+
+    for row in cursor.fetchall():
+        _id, name, weight = row
+        print(_id, name, weight)
+
+    cursor.close()
+    connection.close()
