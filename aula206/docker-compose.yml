@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  mysql_206:
+    container_name: mysql_206
+    hostname: mysql_206
+    image: mysql:8
+    restart: always
+    command:
+      - --authentication-policy=mysql_native_password
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --innodb_force_recovery=0
+    volumes:
+      - ./mysql_206:/var/lib/mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: senha
+      MYSQL_DATABASE: base_de_dados
+      MYSQL_USER: usuario
+      MYSQL_PASSWORD: senha
+      TZ: America/Sao_Paulo
