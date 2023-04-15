@@ -130,10 +130,24 @@ with connection:
             f'DELETE FROM {TABLE_NAME} '
             'WHERE id = %s'
         )
-        print(cursor.execute(sql, (1,)))  # type: ignore
+        cursor.execute(sql, (1,))  # type: ignore
         connection.commit()
 
         cursor.execute(f'SELECT * FROM {TABLE_NAME} ')  # type: ignore
 
+        # for row in cursor.fetchall():  # type: ignore
+        #     print(row)
+
+    # Editando com UPDATE, WHERE e placeholders no PyMySQL
+    with connection.cursor() as cursor:
+        sql = (
+            f'UPDATE {TABLE_NAME} '
+            'SET nome=%s, idade=%s '
+            'WHERE id=%s'
+        )
+        cursor.execute(sql, ('Eleonor', 102, 4))  # type: ignore
+        cursor.execute(f'SELECT * FROM {TABLE_NAME} ')  # type: ignore
+
         for row in cursor.fetchall():  # type: ignore
             print(row)
+    connection.commit()
