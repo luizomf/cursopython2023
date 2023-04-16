@@ -18,9 +18,6 @@ from django.contrib import admin
 from django.http import HttpResponse
 from django.urls import path
 
-# HTTP Request <-> HTTP Response
-# MVT (MVC)
-
 
 def home(request):
     print('home')
