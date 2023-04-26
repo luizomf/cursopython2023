@@ -6,7 +6,7 @@ def blog(request):
     print('blog')
 
     context = {
-        'text': 'Olá blog',
+        # 'text': 'Olá blog',
         'posts': posts
     }
 
